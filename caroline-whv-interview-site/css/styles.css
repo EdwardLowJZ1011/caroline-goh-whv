@@ -277,21 +277,10 @@ a {
 .hero-art {
   position: relative;
   min-height: 620px;
-  height: 620px;
-  background: var(--cream);
-  border-radius: 44px;
-  overflow: hidden;
-  box-shadow: var(--shadow);
 }
 
 .hero-video {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  border-radius: 44px;
+  display: none;
 }
 
 .hero-photo {
@@ -318,6 +307,8 @@ a {
   bottom: 0;
   width: 45%;
   height: 38%;
+  border-radius: 10px 34px 34px 34px;
+}
   border-radius: 10px 34px 34px 34px;
 }
 
