@@ -1080,10 +1080,7 @@ img[loading="lazy"] {
   }
 
   .availability-card {
-    left: 18px;
-    right: auto;
-    top: 18px;
-    width: 210px;
+    display: none;
   }
 
   .section {
