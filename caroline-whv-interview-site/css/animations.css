@@ -1,0 +1,119 @@
+/* Animation styles - simplified for reliability */
+
+.panel,
+.learning-card,
+.role-card,
+.download-card,
+.fact-card {
+  /* Remove opacity: 0 that was hiding elements */
+  transition: all 300ms ease;
+}
+
+.gallery-item {
+  transition: transform 300ms ease;
+}
+
+.gallery-item img {
+  transition: transform 420ms ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.045);
+}
+
+.nav-links a:hover,
+.button:hover,
+.download-link:hover,
+.contact-actions a:hover {
+  transition: all 180ms ease;
+}
+
+/* Gallery progress indicators (mobile) */
+.gallery-indicators {
+  display: none;
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  gap: 6px;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.indicator-dot {
+  width: 8px;
+  height: 8px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  padding: 0;
+  cursor: pointer;
+  transition: all 240ms ease;
+  pointer-events: all;
+}
+
+.indicator-dot.active {
+  background: rgba(255, 255, 255, 0.95);
+  width: 20px;
+  border-radius: 4px;
+}
+
+.indicator-dot:hover {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* Show indicators on mobile when viewing gallery */
+@media (max-width: 640px) {
+  #floristry .gallery-indicators {
+    display: flex;
+  }
+}
+
+/* Smooth scroll animations for cards */
+.learning-card,
+.role-card,
+.download-card {
+  animation: slideInUp 600ms ease-out backwards;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.learning-card:nth-child(1) { animation-delay: 100ms; }
+.learning-card:nth-child(2) { animation-delay: 150ms; }
+.learning-card:nth-child(3) { animation-delay: 200ms; }
+.learning-card:nth-child(4) { animation-delay: 250ms; }
+
+.role-card:nth-child(1) { animation-delay: 100ms; }
+.role-card:nth-child(2) { animation-delay: 150ms; }
+.role-card:nth-child(3) { animation-delay: 200ms; }
+.role-card:nth-child(4) { animation-delay: 250ms; }
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
