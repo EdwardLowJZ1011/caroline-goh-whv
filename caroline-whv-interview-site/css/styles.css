@@ -159,8 +159,8 @@ a {
   justify-items: start;
   width: min(1180px, calc(100% - 40px));
   margin: 0 auto;
-  height: 100vh;
-  padding: 0 20px;
+  min-height: 100vh;
+  padding: 40px 20px;
 }
 
 .eyebrow {
@@ -279,7 +279,7 @@ a {
 .hero-art {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   border-radius: 44px;
   overflow: hidden;
 }
