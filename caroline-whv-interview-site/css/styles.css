@@ -323,9 +323,8 @@ a {
 
 .availability-card {
   position: absolute;
-  right: 16px;
-  top: 50%;
-  transform: translateY(-50%);
+  left: -154px;
+  top: 16px;
   width: 220px;
   padding: 22px;
   color: #ffffff;
