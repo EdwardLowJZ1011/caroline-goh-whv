@@ -278,10 +278,8 @@ a {
   position: relative;
   min-height: 620px;
   height: 620px;
-  background: var(--cream);
   border-radius: 44px;
   overflow: hidden;
-  box-shadow: var(--shadow);
 }
 
 .hero-video {
@@ -323,14 +321,13 @@ a {
 
 .availability-card {
   position: absolute;
-  left: -154px;
-  top: 16px;
+  left: -250px;
+  bottom: 20px;
   width: 220px;
   padding: 22px;
   color: #ffffff;
   background: var(--sage);
   border-radius: 30px 4px 30px 4px;
-  box-shadow: 0 22px 60px rgba(32, 55, 45, 0.25);
 }
 
 .availability-card::after {
@@ -445,7 +442,6 @@ a {
 
 .floral-strip img {
   width: 100%;
-  height: 230px;
   object-fit: cover;
 }
 
