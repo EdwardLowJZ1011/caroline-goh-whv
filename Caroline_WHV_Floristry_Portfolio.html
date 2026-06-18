@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Caroline WHV Floristry Portfolio</title>
+    <style>
+      :root {
+        --paper: #fffefa;
+        --ink: #1d211e;
+        --muted: #646b65;
+        --sage: #445a4b;
+        --sage-soft: #e8eee7;
+        --cream: #f3efe6;
+        --rust: #ae6143;
+        --line: #d8d8ce;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: #ffffff;
+        color: var(--ink);
+        font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+      }
+
+      body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .page {
+        position: relative;
+        width: 210mm;
+        height: 297mm;
+        margin: 0 auto;
+        padding: 13mm 14mm 11mm 17mm;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 6% 3%, rgba(174, 97, 67, 0.09), transparent 26%),
+          linear-gradient(90deg, rgba(68, 90, 75, 0.04), transparent 36%),
+          var(--paper);
+      }
+
+      .page::before {
+        content: "";
+        position: absolute;
+        inset: 0 auto 0 0;
+        width: 3mm;
+        background: var(--sage);
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 1fr 50mm;
+        gap: 10mm;
+        align-items: start;
+        padding-bottom: 6mm;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .kicker {
+        margin: 0 0 6px;
+        color: var(--rust);
+        font-size: 9.5px;
+        font-weight: 800;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 37px;
+        line-height: 0.98;
+        letter-spacing: -0.04em;
+        font-weight: 600;
+      }
+
+      .summary {
+        margin: 5mm 0 0;
+        max-width: 112mm;
+        color: var(--muted);
+        font-size: 12px;
+        line-height: 1.55;
+      }
+
+      .badge {
+        padding: 5mm;
+        color: #ffffff;
+        background: var(--sage);
+        border-radius: 0 4mm 0 4mm;
+      }
+
+      .badge-label {
+        color: #efd8c9;
+        font-size: 8.8px;
+        font-weight: 800;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .badge-title {
+        margin-top: 5px;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 18px;
+        line-height: 1.15;
+        font-weight: 700;
+      }
+
+      .badge-copy {
+        margin-top: 7px;
+        font-size: 10px;
+        line-height: 1.45;
+      }
+
+      .focus {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 3mm;
+        margin-top: 6mm;
+      }
+
+      .focus-card {
+        min-height: 24mm;
+        padding: 3.5mm;
+        background: var(--cream);
+        border-top: 3px solid var(--rust);
+      }
+
+      .focus-title {
+        color: var(--sage);
+        font-size: 9.4px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .focus-copy {
+        margin-top: 4px;
+        font-size: 9.5px;
+        line-height: 1.35;
+      }
+
+      .visuals {
+        display: grid;
+        grid-template-columns: 1.16fr 0.84fr;
+        gap: 4mm;
+        margin-top: 6mm;
+      }
+
+      .photo-card {
+        position: relative;
+        overflow: hidden;
+        min-height: 36mm;
+        margin: 0;
+        background: var(--cream);
+      }
+
+      .photo-card img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .hero-photo {
+        height: 88mm;
+        border-radius: 0 5mm 0 0;
+      }
+
+      .photo-stack {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        gap: 4mm;
+      }
+
+      .photo-stack .photo-card {
+        height: 42mm;
+      }
+
+      .caption {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 3mm;
+        color: #ffffff;
+        font-size: 9.5px;
+        font-weight: 750;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        background: linear-gradient(0deg, rgba(29, 33, 30, 0.76), rgba(29, 33, 30, 0));
+      }
+
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 3mm;
+        margin-top: 4mm;
+      }
+
+      .gallery .photo-card {
+        height: 41mm;
+      }
+
+      .note {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5mm;
+        margin-top: 5mm;
+        padding-top: 5mm;
+        border-top: 1px solid var(--line);
+      }
+
+      .note-title {
+        color: var(--rust);
+        font-size: 9.5px;
+        font-weight: 800;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      .note-copy {
+        margin-top: 4px;
+        font-size: 10.6px;
+        line-height: 1.45;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <div>
+          <p class="kicker">Floristry Training Portfolio · May 2026</p>
+          <h1>Caroline Goh<br>Course Learning & Floral Practice</h1>
+          <p class="summary">
+            Completed floristry training at Duanmu Flower School in Hangzhou, covering hands-on
+            bouquet making, floral arrangement, flower wrapping, product presentation, flower care,
+            and event floral styling. This page supports her WHV applications for floristry assistant,
+            event crew, retail display, gifting, hospitality styling, and seasonal support roles.
+          </p>
+        </div>
+
+        <aside class="badge">
+          <div class="badge-label">Training</div>
+          <div class="badge-title">Floristry Support</div>
+          <div class="badge-copy">
+            Bouquet design<br>
+            Arrangement &amp; wrapping<br>
+            Flower care<br>
+            Event styling support
+          </div>
+        </aside>
+      </section>
+
+      <section class="focus">
+        <div class="focus-card">
+          <div class="focus-title">Bouquet Work</div>
+          <div class="focus-copy">Hand-tied bouquet structure, colour balance, flower placement, and finishing.</div>
+        </div>
+        <div class="focus-card">
+          <div class="focus-title">Arrangement</div>
+          <div class="focus-copy">Vase, box, basket, and display composition with varied flowers and foliage.</div>
+        </div>
+        <div class="focus-card">
+          <div class="focus-title">Presentation</div>
+          <div class="focus-copy">Wrapping, ribbon detail, product styling, and customer-ready finishing.</div>
+        </div>
+        <div class="focus-card">
+          <div class="focus-title">Event Styling</div>
+          <div class="focus-copy">Setup awareness for displays, vehicle decor, and larger visual scenes.</div>
+        </div>
+      </section>
+
+      <section class="visuals">
+        <figure class="photo-card hero-photo">
+          <img src="images/WhatsApp Image 2026-06-17 at 8.17.05 PM.jpeg" alt="Large-scale event floral installation">
+          <figcaption class="caption">Event floral styling</figcaption>
+        </figure>
+        <div class="photo-stack">
+          <figure class="photo-card">
+            <img src="images/WhatsApp Image 2026-06-17 at 8.16.59 PM.jpeg" alt="White and green floral stand arrangement">
+            <figcaption class="caption">Display arrangement</figcaption>
+          </figure>
+          <figure class="photo-card">
+            <img src="images/WhatsApp Image 2026-06-17 at 8.17.04 PM.jpeg" alt="Pastel floral car styling">
+            <figcaption class="caption">Vehicle decor</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="gallery">
+        <figure class="photo-card">
+          <img src="images/WhatsApp Image 2026-06-17 at 8.16.54 PM.jpeg" alt="Pink rose bouquet">
+          <figcaption class="caption">Bouquet form</figcaption>
+        </figure>
+        <figure class="photo-card">
+          <img src="images/WhatsApp Image 2026-06-17 at 8.17.00 PM.jpeg" alt="Pastel vase floral arrangement">
+          <figcaption class="caption">Vase styling</figcaption>
+        </figure>
+        <figure class="photo-card">
+          <img src="images/WhatsApp Image 2026-06-17 at 8.17.01 PM.jpeg" alt="Modern tropical wrapped bouquet">
+          <figcaption class="caption">Wrapping</figcaption>
+        </figure>
+        <figure class="photo-card">
+          <img src="images/WhatsApp Image 2026-06-17 at 8.17.01 PM (1).jpeg" alt="Blue and white basket arrangement">
+          <figcaption class="caption">Basket work</figcaption>
+        </figure>
+      </section>
+
+      <section class="note">
+        <div>
+          <div class="note-title">Practical Support</div>
+          <div class="note-copy">
+            Able to assist with flower preparation, basic care, arrangement support, wrapping,
+            customer-facing presentation, and setup tasks under florist or event-team direction.
+          </div>
+        </div>
+        <div>
+          <div class="note-title">Role Fit</div>
+          <div class="note-copy">
+            Suitable for floristry assistant, event crew, retail display support, market stall
+            support, hospitality styling, and seasonal floral or gifting roles.
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

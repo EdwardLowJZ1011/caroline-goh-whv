@@ -1,0 +1,813 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Caroline WHV Resume</title>
+    <style>
+      :root {
+        --paper: #fffefa;
+        --ink: #1d211e;
+        --muted: #646b65;
+        --sage: #445a4b;
+        --sage-light: #e8eee7;
+        --cream: #f3efe6;
+        --rust: #ae6143;
+        --line: #d8d8ce;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: #ffffff;
+        color: var(--ink);
+        font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+      }
+
+      body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .page {
+        position: relative;
+        width: 210mm;
+        height: 297mm;
+        margin: 0 auto;
+        padding: 11mm 12mm 10mm;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 8% 4%, rgba(174, 97, 67, 0.08), transparent 25%),
+          var(--paper);
+      }
+
+      .page::before {
+        content: "";
+        position: absolute;
+        inset: 0 auto 0 0;
+        width: 3mm;
+        background: var(--sage);
+      }
+
+      .cover-page {
+        display: flex;
+        flex-direction: column;
+        padding: 15mm 17mm 14mm 19mm;
+      }
+
+      .cover-top {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 12mm;
+        align-items: start;
+        padding-bottom: 9mm;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .cover-name {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 45px;
+        line-height: 0.92;
+        letter-spacing: -0.05em;
+        font-weight: 500;
+      }
+
+      .cover-legal-name {
+        margin-top: 8px;
+        font-size: 17px;
+        font-weight: 700;
+      }
+
+      .cover-contact {
+        margin-top: 9px;
+        color: var(--muted);
+        font-size: 11px;
+        line-height: 1.6;
+      }
+
+      .cover-visa {
+        width: 66mm;
+        padding: 6mm;
+        color: #ffffff;
+        background: var(--sage);
+        border-radius: 4mm 0 4mm 0;
+      }
+
+      .cover-visa-label {
+        color: #efd8c9;
+        font-size: 9px;
+        font-weight: 800;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      .cover-visa-title {
+        margin-top: 5px;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 20px;
+        line-height: 1.15;
+        font-weight: 700;
+      }
+
+      .cover-visa-copy {
+        margin-top: 8px;
+        font-size: 10.5px;
+        line-height: 1.45;
+      }
+
+      .cover-content {
+        width: 155mm;
+        margin: 13mm auto 0;
+      }
+
+      .cover-date {
+        color: var(--rust);
+        font-size: 9.5px;
+        font-weight: 800;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .cover-subject {
+        margin: 5mm 0 8mm;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 26px;
+        line-height: 1.15;
+        font-weight: 700;
+      }
+
+      .cover-letter {
+        font-size: 12.6px;
+        line-height: 1.62;
+      }
+
+      .cover-letter p {
+        margin: 0 0 5mm;
+      }
+
+      .cover-strengths {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3.5mm;
+        margin: 8mm 0;
+      }
+
+      .cover-strength {
+        min-height: 29mm;
+        padding: 4mm;
+        background: var(--sage-light);
+        border-top: 3px solid var(--sage);
+      }
+
+      .cover-strength-title {
+        color: var(--sage);
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .cover-strength-copy {
+        margin-top: 5px;
+        font-size: 10.5px;
+        line-height: 1.4;
+      }
+
+      .cover-signoff {
+        margin-top: 8mm;
+        font-size: 12px;
+        line-height: 1.5;
+      }
+
+      .cover-signature {
+        margin-top: 4mm;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 20px;
+        font-weight: 700;
+      }
+
+      .cover-footer {
+        margin-top: auto;
+        padding-top: 5mm;
+        color: var(--muted);
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 0.13em;
+        text-align: right;
+        text-transform: uppercase;
+        border-top: 1px solid var(--line);
+      }
+
+      .header {
+        display: grid;
+        grid-template-columns: 1.14fr 0.86fr;
+        gap: 10mm;
+        align-items: stretch;
+      }
+
+      .identity {
+        padding: 3mm 0 1mm;
+      }
+
+      .kicker {
+        margin: 0 0 6px;
+        color: var(--rust);
+        font-size: 9.5px;
+        font-weight: 800;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+      }
+
+      .name {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 43px;
+        line-height: 0.9;
+        letter-spacing: -0.055em;
+        font-weight: 500;
+      }
+
+      .legal-name {
+        margin-top: 8px;
+        font-size: 17px;
+        line-height: 1.1;
+        font-weight: 700;
+      }
+
+      .headline {
+        margin-top: 9px;
+        max-width: 93%;
+        color: var(--muted);
+        font-size: 10.8px;
+        line-height: 1.4;
+        font-weight: 650;
+        letter-spacing: 0.075em;
+        text-transform: uppercase;
+      }
+
+      .visa-card {
+        position: relative;
+        padding: 5.5mm 6mm 5mm;
+        color: #ffffff;
+        background: var(--sage);
+        border-radius: 4mm 0 4mm 0;
+        box-shadow: 0 3mm 8mm rgba(40, 54, 44, 0.12);
+      }
+
+      .visa-card::after {
+        content: "462";
+        position: absolute;
+        right: 5mm;
+        top: 3mm;
+        color: rgba(255, 255, 255, 0.1);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 40px;
+        line-height: 1;
+      }
+
+      .visa-label {
+        position: relative;
+        z-index: 1;
+        margin: 0 0 9px;
+        color: #efd8c9;
+        font-size: 9.5px;
+        font-weight: 800;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      .visa-row {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 21mm 1fr;
+        gap: 4mm;
+        padding: 5px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .visa-key {
+        color: #d9e3db;
+        font-size: 9px;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .visa-value {
+        font-size: 11.2px;
+        line-height: 1.27;
+        font-weight: 650;
+      }
+
+      .body-grid {
+        display: grid;
+        grid-template-columns: 55mm 1fr;
+        gap: 8mm;
+        margin-top: 8mm;
+        align-items: stretch;
+      }
+
+      .sidebar {
+        min-height: 205mm;
+        padding: 6mm 5mm 5mm;
+        background: var(--cream);
+        border-top: 4px solid var(--rust);
+      }
+
+      .side-section + .side-section {
+        margin-top: 6mm;
+        padding-top: 5mm;
+        border-top: 1px solid #d8d0c5;
+      }
+
+      .side-title,
+      .section-title {
+        margin: 0 0 8px;
+        color: var(--rust);
+        font-size: 9.5px;
+        font-weight: 800;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      .contact-row + .contact-row {
+        margin-top: 8px;
+      }
+
+      .contact-key {
+        display: block;
+        margin-bottom: 2px;
+        color: var(--sage);
+        font-size: 8.7px;
+        font-weight: 800;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+      }
+
+      .contact-value {
+        font-size: 11px;
+        line-height: 1.3;
+        font-weight: 550;
+        overflow-wrap: anywhere;
+      }
+
+      .side-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .side-list li {
+        position: relative;
+        margin: 0 0 7px;
+        padding-left: 12px;
+        font-size: 11px;
+        line-height: 1.3;
+      }
+
+      .side-list li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.48em;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: var(--rust);
+      }
+
+      .cert {
+        padding: 4mm;
+        background: rgba(255, 255, 255, 0.55);
+        border-left: 3px solid var(--sage);
+      }
+
+      .cert-name {
+        font-size: 11.2px;
+        line-height: 1.3;
+        font-weight: 700;
+      }
+
+      .cert-place {
+        margin-top: 3px;
+        color: var(--muted);
+        font-size: 10.4px;
+      }
+
+      .cert-details {
+        margin: 5px 0 0;
+        color: var(--ink);
+        font-size: 9.5px;
+        line-height: 1.35;
+      }
+
+      .main {
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+      }
+
+      .main-section {
+        padding-top: 4.5mm;
+        border-top: 1px solid var(--line);
+      }
+
+      .main-section + .main-section {
+        margin-top: 5mm;
+      }
+
+      .profile {
+        margin: 0;
+        font-size: 12.6px;
+        line-height: 1.48;
+      }
+
+      .company-row,
+      .part-time-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        align-items: baseline;
+      }
+
+      .company,
+      .part-time-title {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 17px;
+        line-height: 1.15;
+        font-weight: 700;
+      }
+
+      .location {
+        color: var(--muted);
+        font-size: 10.7px;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+
+      .role {
+        margin-top: 4mm;
+      }
+
+      .role-head {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 10px;
+        align-items: baseline;
+      }
+
+      .role-name {
+        color: var(--sage);
+        font-size: 12.5px;
+        line-height: 1.2;
+        font-weight: 800;
+      }
+
+      .role-date {
+        color: var(--muted);
+        font-size: 10.5px;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+
+      .bullets {
+        margin: 4px 0 0;
+        padding-left: 17px;
+      }
+
+      .bullets li {
+        margin: 0 0 4px;
+        padding-left: 2px;
+        font-size: 11.25px;
+        line-height: 1.32;
+      }
+
+      .bullets li::marker {
+        color: var(--rust);
+      }
+
+      .part-time {
+        margin-top: 5mm;
+        padding: 4.5mm 5mm;
+        background: var(--sage-light);
+        border-radius: 0 3mm 0 3mm;
+      }
+
+      .part-time-meta {
+        margin-top: 3px;
+        color: var(--muted);
+        font-size: 10.5px;
+        font-weight: 700;
+      }
+
+      .part-time-roles {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4mm;
+        margin-top: 4mm;
+      }
+
+      .part-time-role {
+        padding-left: 3mm;
+        border-left: 2px solid rgba(68, 90, 75, 0.35);
+      }
+
+      .part-time-role-name {
+        color: var(--sage);
+        font-size: 10.7px;
+        line-height: 1.2;
+        font-weight: 800;
+      }
+
+      .part-time-role-copy {
+        margin-top: 3px;
+        font-size: 9.7px;
+        line-height: 1.28;
+      }
+
+      .education {
+        margin-top: auto;
+      }
+
+      .education-card {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 8mm;
+        align-items: center;
+        padding: 4.5mm 5mm;
+        color: #ffffff;
+        background: var(--rust);
+      }
+
+      .school {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 15px;
+        line-height: 1.2;
+        font-weight: 700;
+      }
+
+      .degree {
+        margin-top: 3px;
+        font-size: 10.8px;
+        line-height: 1.3;
+      }
+
+      .education-date {
+        font-size: 10.5px;
+        font-weight: 750;
+        white-space: nowrap;
+      }
+
+      @media print {
+        html,
+        body,
+        .page {
+          background-color: #ffffff;
+        }
+
+        .cover-page {
+          break-after: page;
+          page-break-after: always;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page cover-page">
+      <header class="cover-top">
+        <div>
+          <p class="kicker">Cover Letter · Working Holiday 2026</p>
+          <h1 class="cover-name">Caroline</h1>
+          <div class="cover-legal-name">Goh Qian Ying</div>
+          <div class="cover-contact">
+            0402 270 460<br>
+            carolinegoh1214@gmail.com
+          </div>
+        </div>
+
+        <aside class="cover-visa">
+          <div class="cover-visa-label">Work &amp; Holiday Visa</div>
+          <div class="cover-visa-title">Subclass 462</div>
+          <div class="cover-visa-copy">
+            Valid June 2026 - June 2027<br>
+            Available to start immediately<br>
+            Flexible for rostered shifts
+          </div>
+        </aside>
+      </header>
+
+      <section class="cover-content">
+        <h2 class="cover-subject">Application for Casual, Seasonal &amp; Short-Term Opportunities</h2>
+
+        <div class="cover-letter">
+          <p>Dear Hiring Manager,</p>
+
+          <p>I am writing to express my interest in joining your team in a casual, seasonal, or short-term position. I hold a Work and Holiday Visa subclass 462, valid from June 2026 to June 2027, and I am available to start immediately. I can work flexible rostered shifts, including weekdays, weekends, and public holidays.</p>
+
+          <p>I bring a dependable combination of professional leadership, coordination, customer service, retail, and event experience. During my time with Huawei in Malaysia, I progressed into a team lead role where I coordinated workloads, supported colleagues, communicated across teams, and helped deliver work accurately and on schedule. These experiences strengthened my organisation, problem-solving, and ability to remain calm in busy environments.</p>
+
+          <p>Alongside my professional background, I have worked as a retail assistant, promoter, brand ambassador, and event crew member. I am comfortable assisting customers, replenishing stock, handling cash, supporting event setup and operations, and taking on practical day-to-day tasks. I have also completed floristry training covering bouquet design, floral arrangement, wrapping, flower care, and event floral styling.</p>
+        </div>
+
+        <div class="cover-strengths">
+          <div class="cover-strength">
+            <div class="cover-strength-title">Reliable</div>
+            <div class="cover-strength-copy">Punctual, responsible, and committed to completing each task carefully.</div>
+          </div>
+          <div class="cover-strength">
+            <div class="cover-strength-title">Adaptable</div>
+            <div class="cover-strength-copy">Quick to learn and comfortable in structured, customer-facing, or fast-paced work.</div>
+          </div>
+          <div class="cover-strength">
+            <div class="cover-strength-title">Team Focused</div>
+            <div class="cover-strength-copy">Clear communicator who supports colleagues and contributes wherever needed.</div>
+          </div>
+        </div>
+
+        <div class="cover-letter">
+          <p>I would welcome the opportunity to contribute my positive attitude, strong work ethic, and willingness to learn. Thank you for considering my application. I look forward to discussing how I can support your team.</p>
+        </div>
+
+        <div class="cover-signoff">
+          Kind regards,
+          <div class="cover-signature">Caroline Goh</div>
+        </div>
+      </section>
+
+      <footer class="cover-footer">Available for opportunities across Australia</footer>
+    </main>
+
+    <main class="page resume-page">
+      <header class="header">
+        <div class="identity">
+          <p class="kicker">Working in Australia · 2026</p>
+          <h1 class="name">Caroline</h1>
+          <div class="legal-name">Goh Qian Ying</div>
+          <div class="headline">WHV-ready professional with leadership, analytical, and customer-facing experience</div>
+        </div>
+
+        <section class="visa-card">
+          <p class="visa-label">Work &amp; Holiday Visa</p>
+          <div class="visa-row">
+            <div class="visa-key">Subclass</div>
+            <div class="visa-value">462</div>
+          </div>
+          <div class="visa-row">
+            <div class="visa-key">Valid</div>
+            <div class="visa-value">June 2026 - June 2027</div>
+          </div>
+          <div class="visa-row">
+            <div class="visa-key">Available</div>
+            <div class="visa-value">Available to start immediately · weekdays, weekends, public holidays, and rostered shifts</div>
+          </div>
+          <div class="visa-row">
+            <div class="visa-key">Open to</div>
+            <div class="visa-value">Any suitable casual, seasonal, or short-term role</div>
+          </div>
+        </section>
+      </header>
+
+      <section class="body-grid">
+        <aside class="sidebar">
+          <section class="side-section">
+            <h2 class="side-title">Contact</h2>
+            <div class="contact-row">
+              <span class="contact-key">Phone</span>
+              <div class="contact-value">0402 270 460</div>
+            </div>
+            <div class="contact-row">
+              <span class="contact-key">Email</span>
+              <div class="contact-value">carolinegoh1214@gmail.com</div>
+            </div>
+          </section>
+
+          <section class="side-section">
+            <h2 class="side-title">Languages</h2>
+            <ul class="side-list">
+              <li>Mandarin Chinese</li>
+              <li>English</li>
+              <li>Malay</li>
+            </ul>
+          </section>
+
+          <section class="side-section">
+            <h2 class="side-title">Certification</h2>
+            <div class="cert">
+              <div class="cert-name">Floristry Training</div>
+              <div class="cert-place">Duanmu Flower School, Hangzhou, China (May 2026)</div>
+              <p class="cert-details">Bouquet design, floral arrangement, flower care, flower wrapping and presentation techniques, and event floral styling.</p>
+            </div>
+          </section>
+
+          <section class="side-section">
+            <h2 class="side-title">Core Skills</h2>
+            <ul class="side-list">
+              <li>Leadership and team coordination</li>
+              <li>Data analysis and reporting</li>
+              <li>Python, SQL, dashboards, and APIs</li>
+              <li>Customer communication and event support</li>
+              <li>Problem-solving and adaptability</li>
+            </ul>
+          </section>
+        </aside>
+
+        <section class="main">
+          <section class="main-section">
+            <h2 class="section-title">Profile</h2>
+            <p class="profile">
+              Friendly, reliable, and adaptable professional with experience across data analytics,
+              team leadership, customer service, retail operations, and event support. Quick to learn,
+              hands-on, and comfortable contributing in both structured and fast-paced environments.
+              Brings clear communication, a strong work ethic, and a flexible approach to casual,
+              seasonal, and short-term work.
+            </p>
+          </section>
+
+          <section class="main-section">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="company-row">
+              <div class="company">Huawei (M) Technology Sdn Bhd</div>
+              <div class="location">Malaysia</div>
+            </div>
+
+            <div class="role">
+              <div class="role-head">
+                <div class="role-name">DOC SRE Team Lead</div>
+                <div class="role-date">Apr 2025 - Apr 2026</div>
+              </div>
+              <ul class="bullets">
+                <li>Managed team coordination, task allocation, and project execution.</li>
+                <li>Led task distribution and supported team management and development planning.</li>
+              </ul>
+            </div>
+
+            <div class="role">
+              <div class="role-head">
+                <div class="role-name">DOC Engineer</div>
+                <div class="role-date">Oct 2023 - Apr 2025</div>
+              </div>
+              <ul class="bullets">
+                <li>Translated business requirements into actionable insights through cross-functional data analysis.</li>
+                <li>Developed Python and SQL data pipelines, real-time KPI dashboards, and API-based data retrieval.</li>
+              </ul>
+            </div>
+
+            <div class="role">
+              <div class="role-head">
+                <div class="role-name">Data Analytics Intern · Supply Chain Management</div>
+                <div class="role-date">May 2023 - Sep 2023</div>
+              </div>
+              <ul class="bullets">
+                <li>Developed machine-learning text classification for product categorization and supported web application development.</li>
+              </ul>
+            </div>
+
+            <div class="part-time">
+              <div class="part-time-row">
+                <div class="part-time-title">Part-Time Experience</div>
+                <div class="location">Malaysia</div>
+              </div>
+              <div class="part-time-roles">
+                <div class="part-time-role">
+                  <div class="part-time-role-name">Retail Assistant</div>
+                  <div class="part-time-role-copy">Customer service, stock replenishment, inventory counting, cleaning, and maintenance.</div>
+                </div>
+                <div class="part-time-role">
+                  <div class="part-time-role-name">Promoter &amp; Brand Ambassador</div>
+                  <div class="part-time-role-copy">Product promotion, customer engagement, sales assistance, and event support.</div>
+                </div>
+                <div class="part-time-role">
+                  <div class="part-time-role-name">Event Crew</div>
+                  <div class="part-time-role-copy">Booth setup, beverage sales, cash handling, crowd assistance, and event operations.</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="main-section education">
+            <h2 class="section-title">Education</h2>
+            <div class="education-card">
+              <div>
+                <div class="school">INTI International University, Malaysia</div>
+                <div class="degree">Bachelor of Computer Science, Major in Business Analytics</div>
+              </div>
+              <div class="education-date">May 2020 - Sep 2023</div>
+            </div>
+          </section>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>

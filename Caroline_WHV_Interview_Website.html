@@ -1,0 +1,1112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Caroline Goh | WHV Floristry & Event Support</title>
+    <meta name="description" content="Caroline Goh's WHV interview portfolio for floristry, events, retail, hospitality, and customer-facing support roles in Australia.">
+    <style>
+      :root {
+        --paper: #fffefa;
+        --ink: #1d211e;
+        --muted: #626a63;
+        --sage: #405a4a;
+        --sage-dark: #20372d;
+        --sage-soft: #e7efe7;
+        --cream: #f4efe5;
+        --rust: #af6242;
+        --blush: #ead4c6;
+        --line: rgba(64, 90, 74, 0.18);
+        --shadow: 0 24px 70px rgba(32, 55, 45, 0.14);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 8% 0%, rgba(175, 98, 66, 0.16), transparent 28rem),
+          radial-gradient(circle at 88% 10%, rgba(64, 90, 74, 0.16), transparent 26rem),
+          linear-gradient(90deg, rgba(64, 90, 74, 0.08), transparent 20rem),
+          var(--paper);
+        font-family: "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .site-shell {
+        min-height: 100vh;
+      }
+
+      .nav {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        padding: 14px clamp(20px, 4vw, 58px);
+        background: rgba(255, 254, 250, 0.86);
+        border-bottom: 1px solid var(--line);
+        backdrop-filter: blur(18px);
+      }
+
+      .brand {
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+        white-space: nowrap;
+      }
+
+      .brand-name {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 26px;
+        letter-spacing: -0.06em;
+      }
+
+      .brand-label {
+        color: var(--rust);
+        font-size: 10px;
+        font-weight: 850;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        padding: 4px;
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 750;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.48);
+      }
+
+      .nav-links a {
+        padding: 8px 11px;
+        border-radius: 999px;
+        transition: 180ms ease;
+      }
+
+      .nav-links a:hover {
+        color: #ffffff;
+        background: var(--sage);
+      }
+
+      .nav-cta {
+        padding: 10px 15px;
+        color: #ffffff;
+        font-size: 12px;
+        font-weight: 850;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        background: var(--sage);
+        border-radius: 999px;
+        box-shadow: 0 10px 24px rgba(64, 90, 74, 0.22);
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 0.92fr) minmax(420px, 1.08fr);
+        gap: clamp(32px, 5vw, 72px);
+        align-items: center;
+        width: min(1180px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: clamp(58px, 8vw, 105px) 0 58px;
+      }
+
+      .eyebrow {
+        margin: 0 0 14px;
+        color: var(--rust);
+        font-size: 11px;
+        font-weight: 900;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+      }
+
+      .hero h1 {
+        margin: 0;
+        max-width: 620px;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(56px, 7vw, 98px);
+        line-height: 0.9;
+        letter-spacing: -0.075em;
+        font-weight: 520;
+      }
+
+      .hero-subtitle {
+        margin: 22px 0 0;
+        max-width: 620px;
+        color: var(--muted);
+        font-size: clamp(17px, 2vw, 21px);
+        line-height: 1.5;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 30px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 46px;
+        padding: 0 18px;
+        font-size: 13px;
+        font-weight: 850;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        border-radius: 999px;
+        transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+      }
+
+      .button:hover {
+        transform: translateY(-2px);
+      }
+
+      .button.primary {
+        color: #ffffff;
+        background: var(--sage);
+        box-shadow: 0 16px 38px rgba(64, 90, 74, 0.24);
+      }
+
+      .button.secondary {
+        color: var(--sage);
+        background: rgba(255, 255, 255, 0.62);
+        border: 1px solid var(--line);
+      }
+
+      .hero-facts {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        margin-top: 34px;
+      }
+
+      .fact-card {
+        padding: 16px;
+        background: rgba(255, 255, 255, 0.62);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+      }
+
+      .fact-key {
+        color: var(--rust);
+        font-size: 10px;
+        font-weight: 900;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .fact-value {
+        margin-top: 7px;
+        font-size: 15px;
+        line-height: 1.25;
+        font-weight: 800;
+      }
+
+      .hero-art {
+        position: relative;
+        min-height: 620px;
+      }
+
+      .hero-photo {
+        position: absolute;
+        overflow: hidden;
+        background: var(--cream);
+        border: 10px solid rgba(255, 254, 250, 0.88);
+        box-shadow: var(--shadow);
+      }
+
+      .hero-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .hero-photo.large {
+        inset: 0 16% 11% 0;
+        border-radius: 44px 44px 10px 44px;
+      }
+
+      .hero-photo.small {
+        right: 0;
+        bottom: 0;
+        width: 45%;
+        height: 38%;
+        border-radius: 10px 34px 34px 34px;
+      }
+
+      .availability-card {
+        position: absolute;
+        right: 5%;
+        top: 10%;
+        width: 220px;
+        padding: 22px;
+        color: #ffffff;
+        background: var(--sage);
+        border-radius: 30px 4px 30px 4px;
+        box-shadow: 0 22px 60px rgba(32, 55, 45, 0.25);
+      }
+
+      .availability-card::after {
+        content: "462";
+        position: absolute;
+        right: 14px;
+        top: 8px;
+        color: rgba(255, 255, 255, 0.11);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 52px;
+        line-height: 1;
+      }
+
+      .availability-card strong {
+        display: block;
+        position: relative;
+        z-index: 1;
+        color: #efd8c9;
+        font-size: 10px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .availability-card span {
+        display: block;
+        position: relative;
+        z-index: 1;
+        margin-top: 10px;
+        font-size: 17px;
+        line-height: 1.25;
+        font-weight: 850;
+      }
+
+      .section {
+        width: min(1180px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 72px 0;
+      }
+
+      .section-head {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 28px;
+        margin-bottom: 28px;
+      }
+
+      .section h2 {
+        margin: 0;
+        max-width: 650px;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(38px, 5vw, 64px);
+        line-height: 0.95;
+        letter-spacing: -0.055em;
+        font-weight: 560;
+      }
+
+      .section-note {
+        max-width: 410px;
+        color: var(--muted);
+        font-size: 15px;
+        line-height: 1.55;
+      }
+
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+      }
+
+      .panel {
+        padding: clamp(24px, 4vw, 38px);
+        background: rgba(255, 255, 255, 0.65);
+        border: 1px solid var(--line);
+        border-radius: 34px;
+      }
+
+      .profile-copy {
+        font-size: 20px;
+        line-height: 1.55;
+      }
+
+      .profile-copy p {
+        margin: 0;
+      }
+
+      .skill-cloud {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        min-height: 38px;
+        padding: 0 14px;
+        color: var(--sage-dark);
+        font-size: 13px;
+        font-weight: 800;
+        background: var(--sage-soft);
+        border: 1px solid rgba(64, 90, 74, 0.16);
+        border-radius: 999px;
+      }
+
+      .floral-strip {
+        margin-top: 20px;
+        overflow: hidden;
+        border-radius: 34px;
+      }
+
+      .floral-strip img {
+        width: 100%;
+        height: 230px;
+        object-fit: cover;
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr 0.8fr;
+        grid-auto-rows: 235px;
+        gap: 14px;
+      }
+
+      .gallery-item {
+        position: relative;
+        overflow: hidden;
+        padding: 0;
+        color: #ffffff;
+        background: var(--cream);
+        border: 0;
+        border-radius: 28px;
+        cursor: zoom-in;
+        box-shadow: 0 16px 38px rgba(32, 55, 45, 0.1);
+      }
+
+      .gallery-item:nth-child(1) {
+        grid-row: span 2;
+      }
+
+      .gallery-item:nth-child(4) {
+        grid-column: span 2;
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 420ms ease;
+      }
+
+      .gallery-item:hover img {
+        transform: scale(1.045);
+      }
+
+      .gallery-label {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 42px 18px 16px;
+        font-size: 12px;
+        font-weight: 900;
+        letter-spacing: 0.09em;
+        text-align: left;
+        text-transform: uppercase;
+        background: linear-gradient(0deg, rgba(29, 33, 30, 0.78), transparent);
+      }
+
+      .learning-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 14px;
+      }
+
+      .learning-card {
+        min-height: 190px;
+        padding: 22px;
+        background: var(--cream);
+        border-top: 4px solid var(--rust);
+        border-radius: 3px 26px 26px 26px;
+      }
+
+      .learning-card h3,
+      .role-card h3 {
+        margin: 0;
+        color: var(--sage);
+        font-size: 14px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .learning-card p,
+      .role-card p {
+        margin: 12px 0 0;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      .experience-wrap {
+        display: grid;
+        grid-template-columns: 0.95fr 1.05fr;
+        gap: 18px;
+      }
+
+      .timeline {
+        position: relative;
+        padding-left: 24px;
+      }
+
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 7px;
+        top: 6px;
+        bottom: 6px;
+        width: 2px;
+        background: var(--line);
+      }
+
+      .timeline-item {
+        position: relative;
+        padding: 0 0 24px;
+      }
+
+      .timeline-item:last-child {
+        padding-bottom: 0;
+      }
+
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: -22px;
+        top: 5px;
+        width: 12px;
+        height: 12px;
+        border: 3px solid var(--paper);
+        border-radius: 50%;
+        background: var(--rust);
+        box-shadow: 0 0 0 1px var(--line);
+      }
+
+      .timeline-date {
+        color: var(--rust);
+        font-size: 11px;
+        font-weight: 900;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+      }
+
+      .timeline-title {
+        margin-top: 5px;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 22px;
+        line-height: 1.1;
+        font-weight: 700;
+      }
+
+      .timeline-copy {
+        margin-top: 8px;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      .role-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+      }
+
+      .role-card {
+        padding: 22px;
+        background: rgba(255, 255, 255, 0.7);
+        border: 1px solid var(--line);
+        border-radius: 26px;
+      }
+
+      .downloads {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+
+      .download-card {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        padding: 24px;
+        background: var(--sage-dark);
+        color: #ffffff;
+        border-radius: 32px;
+      }
+
+      .download-card:nth-child(2) {
+        background: var(--rust);
+      }
+
+      .download-title {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 27px;
+        line-height: 1.05;
+        font-weight: 700;
+      }
+
+      .download-copy {
+        margin-top: 8px;
+        color: rgba(255, 255, 255, 0.78);
+        font-size: 14px;
+        line-height: 1.4;
+      }
+
+      .download-link {
+        flex: 0 0 auto;
+        padding: 12px 15px;
+        color: var(--ink);
+        font-size: 12px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        background: #ffffff;
+        border-radius: 999px;
+      }
+
+      .contact {
+        padding-bottom: 90px;
+      }
+
+      .contact-card {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 24px;
+        align-items: center;
+        padding: clamp(28px, 5vw, 54px);
+        color: #ffffff;
+        background:
+          linear-gradient(135deg, rgba(32, 55, 45, 0.96), rgba(64, 90, 74, 0.92)),
+          var(--sage-dark);
+        border-radius: 42px;
+        box-shadow: var(--shadow);
+      }
+
+      .contact-card h2 {
+        color: #ffffff;
+      }
+
+      .contact-card p {
+        margin: 14px 0 0;
+        max-width: 640px;
+        color: rgba(255, 255, 255, 0.78);
+        font-size: 17px;
+        line-height: 1.55;
+      }
+
+      .contact-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .contact-actions a {
+        min-width: 190px;
+        padding: 14px 18px;
+        color: var(--sage-dark);
+        font-size: 13px;
+        font-weight: 900;
+        text-align: center;
+        background: #ffffff;
+        border-radius: 999px;
+      }
+
+      .lightbox {
+        position: fixed;
+        inset: 0;
+        z-index: 50;
+        display: none;
+        place-items: center;
+        padding: 28px;
+        background: rgba(18, 28, 23, 0.84);
+      }
+
+      .lightbox.is-open {
+        display: grid;
+      }
+
+      .lightbox img {
+        max-width: min(980px, 100%);
+        max-height: 82vh;
+        object-fit: contain;
+        border: 10px solid rgba(255, 254, 250, 0.92);
+        border-radius: 26px;
+        box-shadow: 0 28px 90px rgba(0, 0, 0, 0.34);
+      }
+
+      .lightbox button {
+        position: absolute;
+        right: 28px;
+        top: 24px;
+        width: 44px;
+        height: 44px;
+        color: var(--sage-dark);
+        font-size: 26px;
+        line-height: 1;
+        background: #ffffff;
+        border: 0;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      @media (max-width: 960px) {
+        .nav {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .nav-links {
+          width: 100%;
+          overflow-x: auto;
+          justify-content: flex-start;
+        }
+
+        .nav-cta {
+          display: none;
+        }
+
+        .hero,
+        .about-grid,
+        .experience-wrap,
+        .downloads,
+        .contact-card {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-art {
+          min-height: 520px;
+        }
+
+        .learning-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .gallery-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .gallery-item:nth-child(1),
+        .gallery-item:nth-child(4) {
+          grid-column: auto;
+          grid-row: auto;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .hero {
+          grid-template-columns: 1fr;
+          padding-top: 42px;
+        }
+
+        .hero h1 {
+          font-size: 54px;
+        }
+
+        .hero-facts,
+        .learning-grid,
+        .role-grid,
+        .gallery-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-art {
+          min-height: 430px;
+        }
+
+        .hero-photo.large {
+          inset: 0 0 14% 0;
+        }
+
+        .hero-photo.small {
+          width: 58%;
+        }
+
+        .availability-card {
+          left: 18px;
+          right: auto;
+          top: 18px;
+          width: 210px;
+        }
+
+        .section {
+          padding: 52px 0;
+        }
+
+        .section-head {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .gallery-item {
+          min-height: 310px;
+        }
+
+        .download-card {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="site-shell">
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="brand" href="#top" aria-label="Caroline Goh home">
+          <span class="brand-name">Caroline Goh</span>
+          <span class="brand-label">WHV 462</span>
+        </a>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#floristry">Floristry</a>
+          <a href="#experience">Experience</a>
+          <a href="#downloads">Downloads</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <a class="nav-cta" href="mailto:carolinegoh1214@gmail.com">Email Caroline</a>
+      </nav>
+
+      <header class="hero" id="top">
+        <section>
+          <p class="eyebrow">Available to start immediately · Australia WHV</p>
+          <h1>Floral, event & customer support with calm hands.</h1>
+          <p class="hero-subtitle">
+            Caroline is a WHV-ready candidate with professional team coordination experience,
+            customer-facing part-time work, and floristry training from Duanmu Flower School.
+            She is open to casual, seasonal, and short-term roles across Australia.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#floristry">View floral work</a>
+            <a class="button secondary" href="Caroline_WHV_Resume.pdf">Download resume</a>
+          </div>
+          <div class="hero-facts" aria-label="Quick facts">
+            <div class="fact-card">
+              <div class="fact-key">Visa</div>
+              <div class="fact-value">Work & Holiday Visa 462</div>
+            </div>
+            <div class="fact-card">
+              <div class="fact-key">Valid</div>
+              <div class="fact-value">June 2026 - June 2027</div>
+            </div>
+            <div class="fact-card">
+              <div class="fact-key">Flexible</div>
+              <div class="fact-value">Weekends, public holidays, rostered shifts</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="hero-art" aria-label="Floristry work preview">
+          <div class="hero-photo large">
+            <img src="images/WhatsApp Image 2026-06-17 at 8.17.05 PM.jpeg" alt="Large-scale orange and green floral event installation">
+          </div>
+          <div class="hero-photo small">
+            <img src="images/WhatsApp Image 2026-06-17 at 8.16.54 PM.jpeg" alt="Pink rose bouquet held by hand">
+          </div>
+          <div class="availability-card">
+            <strong>Ready for</strong>
+            <span>Floristry assistant, retail, hospitality, events & customer-facing support.</span>
+          </div>
+        </section>
+      </header>
+
+      <main>
+        <section class="section" id="about">
+          <div class="section-head">
+            <h2>Friendly, reliable and ready to help.</h2>
+            <p class="section-note">
+              A concise profile for interviewers who need to understand role fit quickly.
+            </p>
+          </div>
+
+          <div class="about-grid">
+            <article class="panel profile-copy">
+              <p>
+                Caroline brings experience across data analytics, team leadership, customer service,
+                retail operations, event support, and floral training. She is quick to learn,
+                hands-on, and comfortable contributing in structured workplaces or fast-paced,
+                customer-facing environments.
+              </p>
+            </article>
+            <article class="panel">
+              <div class="skill-cloud">
+                <span class="pill">Bouquet design</span>
+                <span class="pill">Floral arrangement</span>
+                <span class="pill">Flower care</span>
+                <span class="pill">Event styling support</span>
+                <span class="pill">Customer service</span>
+                <span class="pill">Retail operations</span>
+                <span class="pill">Event crew</span>
+                <span class="pill">Team coordination</span>
+                <span class="pill">Mandarin Chinese</span>
+                <span class="pill">English</span>
+                <span class="pill">Malay</span>
+              </div>
+              <div class="floral-strip">
+                <img src="images/WhatsApp Image 2026-06-17 at 8.17.03 PM.jpeg" alt="Floral display arranged around a vehicle trunk">
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="floristry">
+          <div class="section-head">
+            <h2>Floristry course work and visual practice.</h2>
+            <p class="section-note">
+              Training completed at Duanmu Flower School, Hangzhou in May 2026.
+              All 15 course images are included here as visual evidence of learning and practice.
+            </p>
+          </div>
+
+          <div class="gallery-grid">
+            <button class="gallery-item" type="button" data-full="images/WhatsApp Image 2026-06-17 at 8.17.05 PM.jpeg" aria-label="Open large event floral styling image">
+              <img src="images/WhatsApp Image 2026-06-17 at 8.17.05 PM.jpeg" alt="Large-scale orange and green event floral installation">
+              <span class="gallery-label">Event floral styling</span>
+            </button>
+            <button class="gallery-item" type="button" data-full="images/WhatsApp Image 2026-06-17 at 8.16.59 PM.jpeg" aria-label="Open white and green display arrangement image">
+              <img src="images/WhatsApp Image 2026-06-17 at 8.16.59 PM.jpeg" alt="White and green floral stand arrangement">
+              <span class="gallery-label">Display arrangement</span>
+            </button>
+            <button class="gallery-item" type="button" data-full="images/WhatsApp Image 2026-06-17 at 8.17.04 PM.jpeg" aria-label="Open pastel vehicle decor image">
+              <img src="images/WhatsApp Image 2026-06-17 at 8.17.04 PM.jpeg" alt="Pastel floral car decor across a car hood">
+              <span class="gallery-label">Vehicle decor</span>
+            </button>
+            <button class="gallery-item" type="button" data-full="images/WhatsApp Image 2026-06-17 at 8.17.01 PM.jpeg" aria-label="Open modern wrapping image">
+              <img src="images/WhatsApp Image 2026-06-17 at 8.17.01 PM.jpeg" alt="Modern wrapped bouquet with tropical leaves and yellow wrapping">
+              <span class="gallery-label">Wrapping</span>
+            </button>
+            <button class="gallery-item" type="button" data-full="images/WhatsApp Image 2026-06-17 at 8.17.00 PM.jpeg" aria-label="Open pastel vase styling image">
+              <img src="images/WhatsApp Image 2026-06-17 at 8.17.00 PM.jpeg" alt="Pastel vase floral arrangement with orchids and dahlias">
+              <span class="gallery-label">Vase styling</span>
+            </button>
+            <button class="gallery-item" type="button" data-full="images/WhatsApp Image 2026-06-17 at 8.17.01 PM (1).jpeg" aria-label="Open blue and white basket arrangement image">
+              <img src="images/WhatsApp Image 2026-06-17 at 8.17.01 PM (1).jpeg" alt="Blue and white basket floral arrangement">
+              <span class="gallery-label">Basket work</span>
+            </button>
+            <button class="gallery-item" type="button" data-full="images/WhatsApp Image 2026-06-17 at 8.16.54 PM.jpeg" aria-label="Open pink rose bouquet image">
+              <img src="images/WhatsApp Image 2026-06-17 at 8.16.54 PM.jpeg" alt="Pink rose bouquet held by hand">
+              <span class="gallery-label">Rose bouquet</span>
+            </button>
+            <button class="gallery-item" type="button" data-full="images/WhatsApp Image 2026-06-17 at 8.16.58 PM.jpeg" aria-label="Open black wrap bouquet image">
+              <img src="images/WhatsApp Image 2026-06-17 at 8.16.58 PM.jpeg" alt="Floral bouquet in black wrapping on a chair">
+              <span class="gallery-label">Black wrap bouquet</span>
+            </button>
+            <button class="gallery-item" type="button" data-full="images/WhatsApp Image 2026-06-17 at 8.16.59 PM (1).jpeg" aria-label="Open boxed floral arrangement image">
+              <img src="images/WhatsApp Image 2026-06-17 at 8.16.59 PM (1).jpeg" alt="Boxed floral arrangement with roses, calla lilies, and small flowers">
+              <span class="gallery-label">Box arrangement</span>
+            </button>
+            <button class="gallery-item" type="button" data-full="images/WhatsApp Image 2026-06-17 at 8.17.02 PM.jpeg" aria-label="Open yellow and purple bouquet image">
+              <img src="images/WhatsApp Image 2026-06-17 at 8.17.02 PM.jpeg" alt="Yellow and purple hand-held bouquet">
+              <span class="gallery-label">Hand-tied bouquet</span>
+            </button>
+            <button class="gallery-item" type="button" data-full="images/WhatsApp Image 2026-06-17 at 8.17.03 PM.jpeg" aria-label="Open product styling floral display image">
+              <img src="images/WhatsApp Image 2026-06-17 at 8.17.03 PM.jpeg" alt="Floral product styling arranged around a vehicle trunk">
+              <span class="gallery-label">Product styling</span>
+            </button>
+            <button class="gallery-item" type="button" data-full="images/WhatsApp Image 2026-06-17 at 8.17.06 PM.jpeg" aria-label="Open classroom floral installation image">
+              <img src="images/WhatsApp Image 2026-06-17 at 8.17.06 PM.jpeg" alt="Classroom floral installation with yellow and pink flowers">
+              <span class="gallery-label">Scene setup</span>
+            </button>
+            <button class="gallery-item" type="button" data-full="images/WhatsApp Image 2026-06-17 at 8.17.08 PM.jpeg" aria-label="Open tall presentation bouquet image">
+              <img src="images/WhatsApp Image 2026-06-17 at 8.17.08 PM.jpeg" alt="Tall presentation bouquet with white and green flowers">
+              <span class="gallery-label">Presentation bouquet</span>
+            </button>
+            <button class="gallery-item" type="button" data-full="images/WhatsApp Image 2026-06-17 at 8.17.08 PM (1).jpeg" aria-label="Open floral arrangement practice image">
+              <img src="images/WhatsApp Image 2026-06-17 at 8.17.08 PM (1).jpeg" alt="Floristry course arrangement practice">
+              <span class="gallery-label">Course practice</span>
+            </button>
+            <button class="gallery-item" type="button" data-full="images/WhatsApp Image 2026-06-17 at 8.17.11 PM.jpeg" aria-label="Open final course floral work image">
+              <img src="images/WhatsApp Image 2026-06-17 at 8.17.11 PM.jpeg" alt="Final floristry course floral work">
+              <span class="gallery-label">Final course work</span>
+            </button>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-head">
+            <h2>What she can support in a floral or event team.</h2>
+            <p class="section-note">
+              Practical skills phrased for hiring managers, not just course terminology.
+            </p>
+          </div>
+
+          <div class="learning-grid">
+            <article class="learning-card">
+              <h3>Bouquet Work</h3>
+              <p>Hand-tied bouquet structure, colour balance, flower placement, wrapping, and finishing.</p>
+            </article>
+            <article class="learning-card">
+              <h3>Arrangement</h3>
+              <p>Vase, box, basket, display composition, foliage balance, and customer-ready presentation.</p>
+            </article>
+            <article class="learning-card">
+              <h3>Flower Care</h3>
+              <p>Basic preparation, handling, freshness awareness, and tidy workspace support.</p>
+            </article>
+            <article class="learning-card">
+              <h3>Event Styling</h3>
+              <p>Assist with setup, display installation, product styling, vehicle decor, and pack-down tasks.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="experience">
+          <div class="section-head">
+            <h2>Professional discipline plus hands-on service work.</h2>
+            <p class="section-note">
+              Useful for employers who need someone reliable, organised, and willing to help across tasks.
+            </p>
+          </div>
+
+          <div class="experience-wrap">
+            <article class="panel">
+              <div class="timeline">
+                <div class="timeline-item">
+                  <div class="timeline-date">Apr 2025 - Apr 2026</div>
+                  <div class="timeline-title">DOC SRE Team Lead · Huawei Malaysia</div>
+                  <div class="timeline-copy">Managed coordination, task allocation, project execution, and team support.</div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-date">Oct 2023 - Apr 2025</div>
+                  <div class="timeline-title">DOC Engineer · Huawei Malaysia</div>
+                  <div class="timeline-copy">Translated requirements, supported data work, built dashboards, and handled structured workflows.</div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-date">May 2023 - Sep 2023</div>
+                  <div class="timeline-title">Data Analytics Intern · Supply Chain</div>
+                  <div class="timeline-copy">Supported machine-learning classification and web application development tasks.</div>
+                </div>
+              </div>
+            </article>
+
+            <div class="role-grid">
+              <article class="role-card">
+                <h3>Retail Assistant</h3>
+                <p>Customer service, stock replenishment, inventory counting, cleaning, and maintenance.</p>
+              </article>
+              <article class="role-card">
+                <h3>Promoter & Brand Ambassador</h3>
+                <p>Product promotion, customer engagement, sales assistance, and event support.</p>
+              </article>
+              <article class="role-card">
+                <h3>Event Crew</h3>
+                <p>Booth setup, beverage sales, cash handling, crowd assistance, and event operations.</p>
+              </article>
+              <article class="role-card">
+                <h3>WHV Role Fit</h3>
+                <p>Open to casual, seasonal, and short-term work in floristry, events, hospitality, retail, and customer service.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="downloads">
+          <div class="section-head">
+            <h2>Documents for interviewers.</h2>
+            <p class="section-note">
+              Download the formal two-page cover letter/resume or the one-page floristry portfolio sheet.
+            </p>
+          </div>
+
+          <div class="downloads">
+            <article class="download-card">
+              <div>
+                <div class="download-title">Cover Letter & Resume</div>
+                <div class="download-copy">WHV status, profile, experience, education, and core skills.</div>
+              </div>
+              <a class="download-link" href="Caroline_WHV_Resume.pdf">Open PDF</a>
+            </article>
+            <article class="download-card">
+              <div>
+                <div class="download-title">Floristry Portfolio</div>
+                <div class="download-copy">Visual course-learning page showing floral arrangement and styling practice.</div>
+              </div>
+              <a class="download-link" href="Caroline_WHV_Floristry_Portfolio.pdf">Open PDF</a>
+            </article>
+          </div>
+        </section>
+
+        <section class="section contact" id="contact">
+          <div class="contact-card">
+            <div>
+              <p class="eyebrow">Contact</p>
+              <h2>Ready for interviews and immediate starts.</h2>
+              <p>
+                Available for rostered shifts, weekends, public holidays, casual work,
+                seasonal support, short-term roles, and hands-on team assistance.
+              </p>
+            </div>
+            <div class="contact-actions">
+              <a href="tel:0402270460">0402 270 460</a>
+              <a href="mailto:carolinegoh1214@gmail.com">carolinegoh1214@gmail.com</a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Image preview">
+      <button type="button" id="closeLightbox" aria-label="Close image preview">&times;</button>
+      <img id="lightboxImage" src="" alt="">
+    </div>
+
+    <script>
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImage = document.getElementById("lightboxImage");
+      const closeLightbox = document.getElementById("closeLightbox");
+
+      document.querySelectorAll(".gallery-item").forEach((item) => {
+        item.addEventListener("click", () => {
+          const image = item.querySelector("img");
+          lightboxImage.src = item.dataset.full;
+          lightboxImage.alt = image.alt;
+          lightbox.classList.add("is-open");
+          lightbox.setAttribute("aria-hidden", "false");
+        });
+      });
+
+      function hideLightbox() {
+        lightbox.classList.remove("is-open");
+        lightbox.setAttribute("aria-hidden", "true");
+        lightboxImage.src = "";
+      }
+
+      closeLightbox.addEventListener("click", hideLightbox);
+      lightbox.addEventListener("click", (event) => {
+        if (event.target === lightbox) hideLightbox();
+      });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") hideLightbox();
+      });
+    </script>
+  </body>
+</html>
