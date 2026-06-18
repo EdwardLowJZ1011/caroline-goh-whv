@@ -156,9 +156,11 @@ a {
   grid-template-columns: minmax(0, 0.92fr) minmax(420px, 1.08fr);
   gap: clamp(32px, 5vw, 72px);
   align-items: center;
+  justify-items: start;
   width: min(1180px, calc(100% - 40px));
   margin: 0 auto;
-  padding: clamp(58px, 8vw, 105px) 0 58px;
+  height: 100vh;
+  padding: 0 20px;
 }
 
 .eyebrow {
@@ -276,8 +278,8 @@ a {
 
 .hero-art {
   position: relative;
-  min-height: 620px;
-  height: 620px;
+  width: 100%;
+  height: 100vh;
   border-radius: 44px;
   overflow: hidden;
 }
